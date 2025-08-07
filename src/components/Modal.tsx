@@ -33,7 +33,7 @@ export function Modal({ isOpen, onClose, children }: ModalProps) {
 
     return isOpen ? (
       <div className="modal">
-        {children}
+        <p>{children}</p>
       </div>
     ) : null;
 }

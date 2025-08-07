@@ -9,7 +9,11 @@ export function Backdrop({ onClick, isOpen }: BackdropProps) {
   return isOpen ? (
     <div 
       className="backdrop-overlay"
-      onClick={onClick}
+      onClick={(e) => {
+        if(e.target === e.currentTarget) {
+          onClick();
+        }
+      }}
     />
   ) : null;
 }
